@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_chat_addis/pages/home.dart';
 import 'package:flutter_chat_addis/pages/login.dart';
+import 'package:flutter_chat_addis/pages/main_page.dart';
 import 'package:flutter_chat_addis/styles/appColors.dart';
 
 void main() {
@@ -14,14 +15,16 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
             // home: const LoginPage(),
-            initialRoute: '/',
+            initialRoute: '/main',
             routes: {
               '/': (context) => const LoginPage(),
-              '/home': (context) => const Home()
+              '/main': (context) => const MainPage(),
+              '/home': (context) => Home()
             },
             theme: ThemeData(
               fontFamily: 'Urbanist',
               scaffoldBackgroundColor: AppColors.background,
+              brightness: Brightness.dark
             ),
           );
   }
